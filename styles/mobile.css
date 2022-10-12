@@ -27,44 +27,56 @@ html{
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #ecf0f3;
+}
 
 .header{
     width: 100%;
     height: auto;
-    background-color: var(--bg-blue-dark);
+    border-bottom: 1px solid rgb(203, 203, 203);
+
 }
 .nav{
     width: 100%;
     max-width: 1280px;
-    height: 80px;
+    height: 79px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
     margin: 0 auto;
+    
 }
 
 .nav__right{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
-.login{
-    width: 109px;
-    color: var(--text-gray);
+.cotizar{
+    width: 120px;
+    color: #ff014f;
     text-decoration: none;
+    font-weight: 500;
     font-size: 1.3rem;
     padding: 9px 12px;
-    background-color: var(--bg-white);
-    margin-right: 16px;
-    border-radius: 20px;
-    transition: 0.2s ease;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+    border-radius: 6px;
+    display: none;
+    text-align: center;
+    transition: background 0.2s;
 }
-.login:hover{
-    color: var(--text-blue);
-    box-shadow: 2px 6px 16px #3b3f4187;
+.cotizar:hover{
+    color: var(--text-white);
+    background-color: #ff1159;
 }
+
+
+
+
 
 
 /* menu responsive */
@@ -87,25 +99,260 @@ html{
 
 }
 .nav__link{
-    color: var(--text-white);
+    color: var(--text-gray);
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 10px;
     margin: 10px;
     text-decoration: none;
+    transition: 0.2s;
 }
 .nav__link:hover{
-    text-decoration: underline 1.5px;
+    color: #ff014f;
     
 }
 
 
+/* ------main--------- */
+
+.main_info{
+    margin-bottom: 80px;
+    max-width: 500px;
+    padding-right: 20px;
+}
+/* ------------------------ */
+
+.wraper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.estatico{
+    color: #ff014f;
+}
+
+.dinamico{
+    
+    list-style: none;
+    font-size: 2.6rem;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    margin-left: 6px
+}
+.dinamico .dinamico_span{
+    color: #1e2125;
+}
+
+.dinamico li{
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+    color: #1e2125;
+}
+
+@keyframes slide {
+    100%{top: -420%;}
+}
+.dinamico li span {
+    position: relative;
+    
+}
+.dinamico li span::after{
+    content: "";
+    position: absolute;
+    left: 6px;
+    height: 42px;
+    width: 100%;
+    background: #ecf0f3;
+    border-left: 2px solid #1e2125;
+    animation: typing 2s steps(10) infinite;
+
+}
+
+@keyframes typing {
+    40%,60%{
+        left:calc(100% + 30px)
+    }
+    100%{
+        left: 0;
+    }
+}
+/* ---------------------- */
 
 
+.main{
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.bienvenidos{
+    margin-top: 20px;
+    letter-spacing: 2px;
+    color: #3c3e41;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.titulo{
+    color: #1e2125;
+    font-size: 3.2rem;
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+.titulo span{
+    color: #ff014f;
+    font-size: 3.2rem;
+}
+
+.subtitulo{
+    font-size: 2.6rem;
+}
+
+.subtitulo span{
+    font-size: 2.6rem;
+    color: #ff014f;
+}
+.descripcion{
+    color: #3c3e41;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* -----contenedores redes sociales------- */
+
+.titulo_redes{
+    color: #1e2125;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.contenedor_cajas-redes{
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.contenedor-imagen{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #edf1f3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+    transition: 0.2s;
+}
+
+.contenedor-imagen:hover{
+    background: linear-gradient(110.54deg, #943FFF -3.9%, #FF5BA0 120.34%);
+
+}
+.contenedor-imagen-apps{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #edf1f3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+}
+
+
+
+/* ----------------contenedor_mi_foto--------------------- */
+
+.contenedor_mi_foto{
+    
+    width: 80%;
+    max-width: 400px;
+    min-width: 320px;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+    margin: 18px auto;
+    
+    border-radius: 8px;position: relative;
+}
+
+.contenedor_mi_foto img{
+    /* position: absolute; */
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 580px){
+    .main{
+        text-align: center;
+    }
+    .main_info{
+        margin: 0 auto;
+    }
+    .contenedor_cajas-redes{
+        justify-content: center;
+    }
+    .wraper{
+        justify-content: center;
+        text-align: center;
+    }
+}
 
 @media (min-width: 768px){
+    .wraper{
+        justify-content: start;
+        text-align: center;
+    }
+    .main{
+        text-align: start;
+    }
+    .main_info{
+        margin: 0;
+    }
+    .contenedor_cajas-redes{
+        justify-content: start;
+    }
     .nav{
         padding: 0 40px;
+    }
+    .main{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+    .main_info{
+        margin-bottom: 80px;
+        max-width: 700px;
+    
+    }
+    .contenedor_mi_foto{
+        margin: 0;
+        margin-top: 90px;
+        width: 100%;
+        height: 500px;
+        max-width: 460px;
+        box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+        border-radius: 8px;position: relative;
+    }
+    
+    .contenedor_mi_foto img{
+        position: absolute;
+        width: 100%;
+        height: 574px;
+        object-fit: cover;
+        bottom: 0;
+        left: 0;
     }
 }
 
@@ -118,13 +365,10 @@ html{
     .nav__right img{
         display: none;
     }
+    .cotizar{
+        display: block;
+    }
 }
-
-
-
-
-
-
 
 
 
