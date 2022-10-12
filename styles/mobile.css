@@ -35,6 +35,11 @@ body{
     width: 100%;
     height: auto;
     border-bottom: 1px solid rgb(203, 203, 203);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ecf0f3;
+    z-index: 2000;
 
 }
 .nav{
@@ -46,6 +51,7 @@ body{
     align-items: center;
     padding: 0 24px;
     margin: 0 auto;
+    position: relative;
     
 }
 
@@ -53,6 +59,9 @@ body{
     display: flex;
     align-items: center;
     /* justify-content: center; */
+}
+.nav__right img{
+    cursor: pointer;
 }
 
 .cotizar{
@@ -113,7 +122,10 @@ body{
 }
 
 
+
+
 /* ------main--------- */
+
 
 .main_info{
     margin-bottom: 80px;
@@ -135,9 +147,9 @@ body{
     
     list-style: none;
     font-size: 2.6rem;
-    font-weight: 500;
-    height: 40px;
-    line-height: 40px;
+    font-weight: 600;
+    height: 42px;
+    line-height: 42px;
     overflow: hidden;
     margin-left: 6px
 }
@@ -154,7 +166,7 @@ body{
 }
 
 @keyframes slide {
-    100%{top: -420%;}
+    100%{top: -415%;}
 }
 .dinamico li span {
     position: relative;
@@ -188,7 +200,7 @@ body{
     height: 100%;
     max-width: 1280px;
     padding: 0 24px;
-    margin: 0 auto;
+    margin: 86px auto 20px;
 }
 
 .bienvenidos{
@@ -254,7 +266,7 @@ body{
 }
 
 .contenedor-imagen:hover{
-    background: linear-gradient(110.54deg, #943FFF -3.9%, #FF5BA0 120.34%);
+    background-color: #fd185de4;
 
 }
 .contenedor-imagen-apps{
@@ -292,6 +304,77 @@ body{
     bottom: 0;
     left: 0;
 }
+
+
+/* ------------aside__menu__mobil----------- */
+
+.aside__menu__mobil{
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 380px;
+    min-width: 320px;
+    background-color: #edf1f3;
+    padding: 25px 34px;
+    z-index: 1000;
+}
+
+.aside__menu_container{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #c8cacd;
+}
+.close__menu__mobil{
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.close__menu__mobil:active{
+    
+    background-color: #e5e2e2d1;
+}
+
+.lista__menu__mobil{
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+.lista__menu__mobil li{
+    margin-bottom: 24px;
+}
+
+.menu__mobil__link{
+    color: #3c3e41;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.menu__mobil__link:hover{
+    color: #ff014f;
+}
+
+.menu__redes{
+    margin-top: 280px;
+}
+
+
+/* ------------------------------ */
+
+
+.inactive{
+    display: none;
+}
+
+
+
+
 
 @media (min-width: 580px){
     .main{
@@ -369,6 +452,7 @@ body{
         display: block;
     }
 }
+
 
 
 
