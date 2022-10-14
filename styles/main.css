@@ -40,6 +40,8 @@ body{
     left: 0;
     background-color: #ecf0f3;
     z-index: 2000;
+    transition: 2s;
+  
 
 }
 .nav{
@@ -320,6 +322,7 @@ body{
     background-color: #edf1f3;
     padding: 25px 34px;
     z-index: 1000;
+    
 }
 
 .aside__menu_container{
@@ -329,6 +332,7 @@ body{
     justify-content: space-between;
     padding-bottom: 12px;
     border-bottom: 1px solid #c8cacd;
+    
 }
 .close__menu__mobil{
     padding: 8px;
